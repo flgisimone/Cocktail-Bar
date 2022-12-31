@@ -57,6 +57,17 @@
     }
 
     .infoCocktail{
+        animation: showopacity 1s;
+        opacity: 1;
+        
+        @keyframes showopacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
         .presentationCocktail{
             max-height: 15rem;
@@ -93,6 +104,7 @@
             color: rgba(245, 222, 179, 0.93);
             cursor: pointer;
             z-index: 99;
+
         }
 
         .containerBtn_InfoCocktail,
@@ -104,13 +116,33 @@
     }
 }
 
-@media screen and (min-height: 720px) {
+@media screen and (min-height: 600px) {
 
     .cocktail{
 
         .imgCocktail{
             position: absolute;
-            top: 35%;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 16rem;
+            margin: auto;
+            animation-name: rightToleft;
+            animation-duration: 1s;
+        }
+
+    }
+    
+}
+
+
+@media screen and (min-height: 667px) {
+
+    .cocktail{
+
+        .imgCocktail{
+            position: absolute;
+            bottom: 5%;
             left: 50%;
             transform: translate(-50%);
             width: 16rem;
@@ -129,7 +161,7 @@
 
         .imgCocktail{
             position: absolute;
-            top: 40%;
+            bottom: 0%;
             left: 50%;
             transform: translate(-50%);
             width: 16rem;
@@ -148,7 +180,7 @@
 
         .imgCocktail{
             position: absolute;
-            top: 30%;
+            bottom: -10%;
             left: 50%;
             transform: translate(-50%);
             width: 16rem;
@@ -167,7 +199,7 @@
 
         .imgCocktail{
             position: absolute;
-            top: 45%;
+            bottom: -15%;
             left: 50%;
             transform: translate(-50%);
             width: 16rem;

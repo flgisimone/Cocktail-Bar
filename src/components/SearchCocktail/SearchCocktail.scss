@@ -10,14 +10,21 @@
 
     .container_Searchbar{
 
+        width: 70%;
+        margin: auto;
+        background-color: #f5deb3;
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+
         .formSearch{
-            width: 70%;
-            margin: auto;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             gap: 1rem;
-            background-color: #f5deb3;
+            border: 2px solid #682f2f;
             padding: 0.5rem 0.8rem;
             border-radius: 0.6rem;
 
@@ -44,6 +51,12 @@
                 cursor: pointer;
             }
         }
+
+        .textDisclaimer{
+            text-align: center;
+            font-weight: 600;
+            font-size: .9rem;
+        }
     }
 
 }
@@ -51,11 +64,14 @@
 @media screen and (min-width: 768px) {
 
     .searchbar{
-
+      
         .container_Searchbar{
+            width: 30%;
+            
+            align-items: center;
 
             .formSearch{
-                width: 30%;
+                width: 100%;
                 padding: 1rem 1.6rem;
 
                 .inputSearch{
@@ -65,6 +81,10 @@
                 .btnSearch{
                     font-size: 1.8rem;
                 }
+            }
+
+            .textDisclaimer{
+                font-size: 1.2rem;
             }
         }
 

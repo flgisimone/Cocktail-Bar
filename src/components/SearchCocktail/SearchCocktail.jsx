@@ -52,6 +52,7 @@ const SearchCocktail = () => {
                   <i class="fa-solid fa-martini-glass-citrus"></i>
                 </button>
               </form>
+              <p className="textDisclaimer">Inserisci il nome completo del cocktail</p>
           </div>
       </section>
       
