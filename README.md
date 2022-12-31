@@ -17,4 +17,5 @@ Lista cocktail selezionabili:
 - Negroni
 - Blue Lagoon
 - Cosmopolitan
+- Negroni sbagliato
 
