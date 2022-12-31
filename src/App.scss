@@ -1,0 +1,23 @@
+.App{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/sfondo_bar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .App{
+        background-position-y: 85% ;
+    }
+}
