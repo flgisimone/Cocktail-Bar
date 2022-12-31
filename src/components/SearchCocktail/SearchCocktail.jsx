@@ -74,35 +74,35 @@ const SearchCocktail = () => {
                             <div className={infoCocktail ? "infoCocktail hidden" : "infoCocktail show"}>
                                 <p class="presentationCocktail">{presentation}</p>
                             </div>
+                            <div className="containerButton">
+                              <div className="containerBtn_InfoCocktail">
+                                <button className={infoCocktail ? "btnOpenInfo show" : "btnOpenInfo hidden"} onClick={btnOpenInfo}>
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                                <button className={!infoCocktail ? "btnCloseInfo show" : "btnCloseInfo hidden"} onClick={btnCloseInfo}>
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </button>
+                              </div>
                             {/*
-                            <div className={recipeCocktail ? "recipeCocktail hidden" : "recipeCocktail show"}>
-                                <p class="ingredientsCocktail">{ingredients[0]}</p>
+                            <div className="containerBtn_RecipeCocktail">
+                                <button className={recipeCocktail ? "btnOpenRecipe show" : "btnOpenRecipe hidden"} onClick={btnOpenRecipe}>
+                                <i class="fa-solid fa-scroll"></i>
+                                </button>
+                                <button className={!recipeCocktail ? "btnCloseRecipe show" : "btnCloseRecipe hidden"} onClick={btnCloseRecipe}>
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </button>
+                              </div>
+                              */}
                             </div>
-                            */}
+                              {/*
+                              <div className={recipeCocktail ? "recipeCocktail hidden" : "recipeCocktail show"}>
+                                  <p class="ingredientsCocktail">{ingredients[0]}</p>
+                              </div>
+                              */}
                         </>  
-                    )
+                      )
                 })
             }
-                    <div className="containerButton">
-            <div className="containerBtn_InfoCocktail">
-                <button className={infoCocktail ? "btnOpenInfo show" : "btnOpenInfo hidden"} onClick={btnOpenInfo}>
-                    <i class="fa-solid fa-circle-info"></i>
-                    </button>
-                    <button className={!infoCocktail ? "btnCloseInfo show" : "btnCloseInfo hidden"} onClick={btnCloseInfo}>
-                        <i class="fa-solid fa-circle-xmark"></i>
-                    </button>
-            </div>
-            {/*
-            <div className="containerBtn_RecipeCocktail">
-                <button className={recipeCocktail ? "btnOpenRecipe show" : "btnOpenRecipe hidden"} onClick={btnOpenRecipe}>
-                <i class="fa-solid fa-scroll"></i>
-                </button>
-                <button className={!recipeCocktail ? "btnCloseRecipe show" : "btnCloseRecipe hidden"} onClick={btnCloseRecipe}>
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </button>
-            </div>
-            */}
-        </div>
         </div>
     </section>
     </>

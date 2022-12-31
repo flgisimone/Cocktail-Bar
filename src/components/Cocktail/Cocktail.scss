@@ -2,8 +2,8 @@
     width: 70%;
     margin: auto;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     gap: 1rem;
 
     *{
@@ -64,6 +64,19 @@
             overflow-y: scroll;
             padding: 0 1rem 0 0;
         }
+
+        .presentationCocktail::-webkit-scrollbar{
+            width: 0.5rem;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+        .presentationCocktail::-webkit-scrollbar-thumb-track{
+            display: none;
+        }
+        .presentationCocktail::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            background-color: #682f2f;
+        }
     }
 
     .containerButton{
@@ -100,6 +113,9 @@
     .cocktail{
         width: 40%;
         margin-top: 2rem;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
 
         .imgCocktail{
             width: 22rem;
@@ -123,6 +139,20 @@
         .recipeCocktail{
             width: 60%;
             font-size: 1.2rem;
+
+            .presentationCocktail::-webkit-scrollbar{
+                width: 0.7rem;
+                background-color: transparent;
+                border-radius: 10px;
+            }
+            .presentationCocktail::-webkit-scrollbar-thumb-track{
+                display: none;
+            }
+            .presentationCocktail::-webkit-scrollbar-thumb{
+                border-radius: 10px;
+                background-color: #682f2f;
+            }
+
         }
 
         .containerButton{
