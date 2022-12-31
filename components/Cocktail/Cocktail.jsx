@@ -58,8 +58,8 @@ const Cocktail = () => {
                                 <p class="ingredientsCocktail">{ingredients[0]}</p>
                             </div>
                             */}
-                            <div className="containerButton">
-                                <div className="containerBtn_InfoCocktail">
+                            <div className={infoCocktail ? "containerButton show" : "containerButton hidden"}>
+                                <div className={infoCocktail ? "containerBtn_InfoCocktail show" : "containerBtn_InfoCocktail hidden"}>
                                     <button className={infoCocktail ? "btnOpenInfo show" : "btnOpenInfo hidden"} onClick={btnOpenInfo}>
                                         <i class="fa-solid fa-circle-info"></i>
                                     </button>
