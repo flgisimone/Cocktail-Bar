@@ -10,3 +10,9 @@ Lista cocktail selezionabili:
 - Rum Cooler
 - Tom Collins
 - Screwdriver
+- Mojito
+- Margarita
+- Negroni
+- Blue Lagoon
+- Cosmopolitan
+
