@@ -1,3 +1,5 @@
+N.B. Il componente Cocktail.jsx non è utilizzato ai fini dell'applicativo ma solo il file Cocktail.scss
+
 Lista cocktail selezionabili:
 
 - White Russian
