@@ -44,21 +44,20 @@ const SearchCocktail = () => {
 
   return (
     <>
-      <section className="searchbar">
+      <section className='searchbar'>
           <div className='container_Searchbar'>
-              <form className="formSearch" name="formSearch" onSubmit={inputSearch}>
-                <input type="text" placeholder='Ordina il cocktail' className='inputSearch' required minlength="3" autoComplete='off'/>
-                <button type="submit" className="btnSearch">
-                  <i class="fa-solid fa-martini-glass-citrus"></i>
+              <form className='formSearch' name='formSearch' onSubmit={inputSearch}>
+                <input type='text' placeholder='Ordina il cocktail' className='inputSearch' required minLength='3' autoComplete='off'/>
+                <button type='submit' className='btnSearch'>
+                  <i className='fa-solid fa-martini-glass-citrus' />
                 </button>
               </form>
-              <p className="textDisclaimer">Inserisci il nome completo del cocktail</p>
+              <p className='textDisclaimer'>Inserisci il nome completo del cocktail</p>
           </div>
       </section>
       
-      <section className="containerCocktail">
-
-        <div className="cocktail">
+      <section className='containerCocktail'>
+        <div className='cocktail'>
             {
                 data.filter((value) => {
                   if(searchName === "") {
@@ -70,53 +69,29 @@ const SearchCocktail = () => {
                 .map(el =>  {
                     const {image, name, presentation, ingredients, id} = el
                     return (
-                        <>       
-                            <img src={image} alt={name} key={id} className="imgCocktail"/>
-                            <div className={infoCocktail ? "infoCocktail hidden" : "infoCocktail show"}>
-                                <p class="presentationCocktail">{presentation}</p>
+                        <div className='cardCocktail'>
+                          <div className='containerInfo'>
+                            <div className={infoCocktail ? 'infoCocktail hidden' : 'infoCocktail show'}>
+                              <p className='presentationCocktail'>{presentation}</p>
                             </div>
-                            <div className="containerButton">
-                              <div className="containerBtn_InfoCocktail">
-                                <button className={infoCocktail ? "btnOpenInfo show" : "btnOpenInfo hidden"} onClick={btnOpenInfo}>
-                                  <i class="fa-solid fa-circle-info"></i>
-                                </button>
-                                <button className={!infoCocktail ? "btnCloseInfo show" : "btnCloseInfo hidden"} onClick={btnCloseInfo}>
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                </button>
-                              </div>
-                            {/*
-                            <div className="containerBtn_RecipeCocktail">
-                                <button className={recipeCocktail ? "btnOpenRecipe show" : "btnOpenRecipe hidden"} onClick={btnOpenRecipe}>
-                                <i class="fa-solid fa-scroll"></i>
-                                </button>
-                                <button className={!recipeCocktail ? "btnCloseRecipe show" : "btnCloseRecipe hidden"} onClick={btnCloseRecipe}>
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                </button>
-                              </div>
-                              */}
+                            <div className='containerBtn_InfoCocktail'>
+                              <button className={infoCocktail ? 'btnOpenInfo show' : 'btnOpenInfo hidden'} onClick={btnOpenInfo}>
+                                  <i className='fa-solid fa-circle-info' />
+                              </button>
+                              <button className={!infoCocktail ? 'btnCloseInfo show' : 'btnCloseInfo hidden'} onClick={btnCloseInfo}>
+                                  <i className='fa-solid fa-circle-xmark' />
+                              </button>
                             </div>
-                              {/*
-                              <div className={recipeCocktail ? "recipeCocktail hidden" : "recipeCocktail show"}>
-                                  <p class="ingredientsCocktail">{ingredients[0]}</p>
-                              </div>
-                              */}
-                        </>  
+                          </div>
+                          <img src={image} alt={name} className={!infoCocktail ? 'imgCocktail-onClick' : 'imgCocktail'} onClick={btnOpenInfo}/>
+                        </div>
                       )
                 })
             }
         </div>
-    </section>
+      </section>
     </>
   )
 }
 
 export default SearchCocktail
-
-/*
- onSubmit={(e) =>{
-              e.preventDefault()
-              const searchString = element[0].value
-              nameCocktail
-              .filter(nameCocktail => nameCocktail.name.includes(searchString) || nameCocktail.name.toLowerCase().includes(searchString))
-              .map(nameCocktail => containerCocktail(nameCocktail))
-            }}*/

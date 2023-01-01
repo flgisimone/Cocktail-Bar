@@ -1,198 +1,288 @@
 .cocktail{
-    width: 70%;
+    width: 90%;
     margin: auto;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-x: scroll;
     gap: 1rem;
+    
+        .cardCocktail{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+            .show{
+                display: flex;
+            }
 
-    .show{
-        display: flex;
-    }
+            .hidden{
+                display: none;
+            }
 
-    .hidden{
-        display: none;
-    }
+            .imgCocktail{
+                width: 17rem;
+                margin: auto;
+                align-self: center;
+                animation-name: rightToleft;
+                animation-duration: 1s;
+                padding-bottom: 0.5rem;
+                margin-top: 2rem;
+            }
+            
+            .imgCocktail-onClick{
+                width: 17rem;
+                margin: auto;
+                margin-top: -10rem;
+                padding-bottom: 0.5rem;
+            }
+        
+            /*@keyframes rightToleft {
+                0% {
+                    position: absolute;
+                    transform: translate(0);
+                }
+                100% {
+                    position: absolute;
+                    transform: translate(-50%); 
+                }
+            }*/
 
-    .imgCocktail{
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%);
-        width: 16rem;
+            .infoCocktail{
+                background: rgba(245, 222, 179, 0.93);
+                color: black;
+                padding: 1rem;
+                z-index: 99;
+                border-radius: 1rem;
+                font-weight: bold;
+                color: #682f2f;
+                font-size: 1.1rem;
+                animation: showopacity 1s;
+                opacity: 1;
+                width: 90%;
+                margin: auto;
+                
+                @keyframes showopacity {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                .presentationCocktail{
+                    height: 9rem;
+                    overflow-y: hidden;
+                    overflow-y: scroll;
+                    padding: 0.2rem;
+                }
+
+                .presentationCocktail::-webkit-scrollbar{
+                    width: 0.5rem;
+                    background-color: transparent;
+                    border-radius: 10px;
+                }
+                .presentationCocktail::-webkit-scrollbar-thumb-track{
+                    display: none;
+                }
+                .presentationCocktail::-webkit-scrollbar-thumb{
+                    border-radius: 10px;
+                    background-color: #682f2f;
+                }
+            }
+
+            .containerInfo{
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 1rem;
+
+                button{
+                    font-size: 3rem;
+                    border: none;
+                    background-color: transparent;
+                    color: rgba(245, 222, 179, 0.93);
+                    cursor: pointer;
+                    z-index: 99;
+
+                    i{
+                        background-color: #682f2f;
+                        border-radius: 50%;
+                    }
+
+                }
+
+                .containerBtn_InfoCocktail{
+                    display: flex;
+                    gap: 0.5rem;
+                    justify-content: flex-end;
+                }
+            }
+        }
+}
+.cocktail::-webkit-scrollbar{
+    height: 0.5rem;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.cocktail::-webkit-scrollbar-thumb-track{
+    display: none;
+}
+.cocktail::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #682f2f;
+}
+
+@media screen and (max-height: 375px) {
+
+    .cocktail .cardCocktail .imgCocktail {
+        width: 17rem;
         margin: auto;
+        align-self: center;
         animation-name: rightToleft;
         animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: -2rem;
     }
 
-    @keyframes rightToleft {
-        0% {
-            position: absolute;
-            transform: translate(0);
-            overflow-y: hidden;
-        }
-        100% {
-            position: absolute;
-            transform: translate(-50%);
-            overflow-y: hidden;   
-        }
-      }
+    .cocktail .cardCocktail .imgCocktail-onClick {
+        width: 17rem;
+        margin: auto;
+        margin-top: -14rem;
+        padding-bottom: 0.5rem;
+    }
     
-    .infoCocktail,
-    .recipeCocktail{
-        background: rgba(245, 222, 179, 0.93);
-        color: black;
-        padding: 1rem;
-        z-index: 99;
-        border-radius: 1rem;
-        font-weight: bold;
-        color: #682f2f;
-        font-size: 1.1rem;
-    }
-
-    .infoCocktail{
-        animation: showopacity 1s;
-        opacity: 1;
-        
-        @keyframes showopacity {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .presentationCocktail{
-            max-height: 15rem;
-            overflow-y: hidden;
-            overflow-y: scroll;
-            padding: 0 1rem 0 0;
-        }
-
-        .presentationCocktail::-webkit-scrollbar{
-            width: 0.5rem;
-            background-color: transparent;
-            border-radius: 10px;
-        }
-        .presentationCocktail::-webkit-scrollbar-thumb-track{
-            display: none;
-        }
-        .presentationCocktail::-webkit-scrollbar-thumb{
-            border-radius: 10px;
-            background-color: #682f2f;
-        }
-    }
-
-    .containerButton{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        background-color: #682f2f;
-        border-radius: 50%;
-
-        button{
-            font-size: 3rem;
-            border: none;
-            background-color: transparent;
-            color: rgba(245, 222, 179, 0.93);
-            cursor: pointer;
-            z-index: 99;
-
-        }
-
-        .containerBtn_InfoCocktail,
-        .containerBtn_RecipeCocktail{
-            display: flex;
-            gap: 0.5rem;
-            align-items: flex-start;
-        }
-    }
 }
 
 @media screen and (min-height: 600px) {
 
-    .cocktail{
+    .cocktail .cardCocktail .imgCocktail {
+        width: 17rem;
+        margin: auto;
+        align-self: center;
+        animation-name: rightToleft;
+        animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: -2rem;
+    }
 
-        .imgCocktail{
-            position: absolute;
-            bottom: 10%;
-            left: 50%;
-            transform: translate(-50%);
-            width: 16rem;
-            margin: auto;
-            animation-name: rightToleft;
-            animation-duration: 1s;
-        }
-
+    .cocktail .cardCocktail .imgCocktail-onClick {
+        width: 17rem;
+        margin: auto;
+        margin-top: -14rem;
+        padding-bottom: 0.5rem;
     }
     
 }
-
 
 @media screen and (min-height: 667px) {
 
-    .cocktail{
+    .cocktail .cardCocktail .imgCocktail {
+        width: 17rem;
+        margin: auto;
+        align-self: center;
+        animation-name: rightToleft;
+        animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: 2.5rem;
+    }
 
-        .imgCocktail{
-            position: absolute;
-            bottom: 5%;
-            left: 50%;
-            transform: translate(-50%);
-            width: 16rem;
-            margin: auto;
-            animation-name: rightToleft;
-            animation-duration: 1s;
-        }
-
+    .cocktail .cardCocktail .imgCocktail-onClick {
+        width: 17rem;
+        margin: auto;
+        margin-top: -9.5rem;
+        padding-bottom: 0.5rem;
     }
     
 }
 
+@media screen and (min-height: 720px) {
+
+    .cocktail .cardCocktail .imgCocktail {
+        width: 19rem;
+        margin: auto;
+        align-self: center;
+        animation-name: rightToleft;
+        animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: 3rem;
+    }
+
+    .cocktail .cardCocktail .imgCocktail-onClick {
+        width: 19rem;
+        margin: auto;
+        margin-top: -9rem;
+        padding-bottom: 0.5rem;
+    }
+    
+}
+    
 @media screen and (min-height: 800px) {
 
-    .cocktail{
+    .cocktail .cardCocktail .imgCocktail {
+        width: 20rem;
+        margin: auto;
+        align-self: center;
+        animation-name: rightToleft;
+        animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: 9rem;
+    }
 
-        .imgCocktail{
-            position: absolute;
-            bottom: 0%;
-            left: 50%;
-            transform: translate(-50%);
-            width: 16rem;
-            margin: auto;
-            animation-name: rightToleft;
-            animation-duration: 1s;
-        }
-
+    .cocktail .cardCocktail .imgCocktail-onClick {
+        width: 20rem;
+        margin: auto;
+        margin-top: -3rem;
+        padding-bottom: 0.5rem;
     }
     
 }
+
+@media screen and (min-height: 900px) {
+
+    .cocktail .cardCocktail .imgCocktail {
+        width: 20rem;
+        margin: auto;
+        align-self: center;
+        animation-name: rightToleft;
+        animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: 9rem;
+    }
+
+    .cocktail .cardCocktail .imgCocktail-onClick {
+        width: 20rem;
+        margin: auto;
+        margin-top: -3rem;
+        padding-bottom: 0.5rem;
+    }
+    
+}
+
 
 @media screen and (min-height: 1000px) {
 
-    .cocktail{
-
-        .imgCocktail{
-            position: absolute;
-            bottom: -10%;
-            left: 50%;
-            transform: translate(-50%);
-            width: 16rem;
-            margin: auto;
-            animation-name: rightToleft;
-            animation-duration: 1s;
-        }
-
+    .cocktail .cardCocktail .imgCocktail {
+        width: 17rem;
+        margin: auto;
+        align-self: center;
+        animation-name: rightToleft;
+        animation-duration: 1s;
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
     }
     
 }
 
+/*
 @media screen and (min-height: 1300px) {
 
     .cocktail{
@@ -210,7 +300,7 @@
 
     }
     
-}
+}*/
 
 @media screen and (min-width: 768px) {
 
@@ -231,7 +321,7 @@
             animation-name: rightToleft;
             animation-duration: 1s;
         }
-        @keyframes rightToleft {
+        /*@keyframes rightToleft {
             0% {
                 position: absolute;
                 transform: translate(120%);
@@ -241,7 +331,7 @@
                 transform: translate(-50%);
                 overflow-y: hidden;   
             }
-          }
+          }*/
 
         .infoCocktail,
         .recipeCocktail{

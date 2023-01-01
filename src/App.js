@@ -4,7 +4,7 @@ import Cocktail from "./components/Cocktail/Cocktail"
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <SearchCocktail />
     </div>
   );
