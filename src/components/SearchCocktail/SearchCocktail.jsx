@@ -11,7 +11,6 @@ const SearchCocktail = () => {
 
   let [searchName, setSearchName] = useState("")
 
-
   const inputSearch = (e) =>{
     e.preventDefault()
     const formSearch = document.forms.formSearch
@@ -19,12 +18,10 @@ const SearchCocktail = () => {
     setSearchName(searchName = element[0].value)
   }
   
-
   const [data, setData] = useState([])
 
   const getData = async() => {
       const res = await axios.get(urlCocktail)
-      console.log(res.data)
       setData(res.data)
   }
   useEffect(() => {
@@ -35,7 +32,6 @@ const SearchCocktail = () => {
 
   const btnOpenInfo = () =>{
       setInfoCocktail(false)
-      //setRecipeCocktail(true)
   }
 
   const btnCloseInfo = () =>{
@@ -47,12 +43,12 @@ const SearchCocktail = () => {
       <section className='searchbar'>
           <div className='container_Searchbar'>
               <form className='formSearch' name='formSearch' onSubmit={inputSearch}>
-                <input type='text' placeholder='Ordina il cocktail' className='inputSearch' required minLength='3' autoComplete='off'/>
+                <input type='text' placeholder='Scegli il cocktail' className='inputSearch' required minLength='3' autoComplete='off'/>
                 <button type='submit' className='btnSearch'>
                   <i className='fa-solid fa-martini-glass-citrus' />
                 </button>
               </form>
-              <p className='textDisclaimer'>Inserisci il nome completo del cocktail</p>
+              {/*<p className='textDisclaimer'>Inserisci il nome del cocktail</p>*/}
           </div>
       </section>
       
@@ -62,7 +58,7 @@ const SearchCocktail = () => {
                 data.filter((value) => {
                   if(searchName === "") {
                     return;
-                  } else if(value.name.toLowerCase().includes(searchName.toLowerCase())) {
+                  }else if(value.name.toLowerCase().includes(searchName.toLowerCase())) {
                     return value
                   }
                 })

@@ -11,9 +11,10 @@
             width: 90%;
             margin: auto;
             display: flex;
+            justify-content: center;
             flex-direction: column;
             align-items: flex-end;
-        
+         
             *{
                 margin: 0;
                 padding: 0;
@@ -32,11 +33,10 @@
                 width: 17rem;
                 margin: auto;
                 align-self: center;
-                animation-name: rightToleft;
-                animation-duration: 1s;
                 padding-bottom: 0.5rem;
                 margin-top: 2rem;
             }
+
             
             .imgCocktail-onClick{
                 width: 17rem;
@@ -44,17 +44,6 @@
                 margin-top: -10rem;
                 padding-bottom: 0.5rem;
             }
-        
-            /*@keyframes rightToleft {
-                0% {
-                    position: absolute;
-                    transform: translate(0);
-                }
-                100% {
-                    position: absolute;
-                    transform: translate(-50%); 
-                }
-            }*/
 
             .infoCocktail{
                 background: rgba(245, 222, 179, 0.93);
@@ -65,12 +54,12 @@
                 font-weight: bold;
                 color: #682f2f;
                 font-size: 1.1rem;
-                animation: showopacity 1s;
-                opacity: 1;
                 width: 90%;
                 margin: auto;
-                
-                @keyframes showopacity {
+                animation: showOpacity 1s;
+                opacity: 1;
+
+                @keyframes showOpacity {
                     0% {
                         opacity: 0;
                     }
@@ -128,6 +117,7 @@
             }
         }
 }
+
 .cocktail::-webkit-scrollbar{
     height: 0.5rem;
     background-color: transparent;
@@ -147,8 +137,6 @@
         width: 17rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: -2rem;
     }
@@ -168,8 +156,6 @@
         width: 17rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: -2rem;
     }
@@ -189,8 +175,6 @@
         width: 17rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: 2.5rem;
     }
@@ -210,8 +194,6 @@
         width: 19rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: 3rem;
     }
@@ -231,8 +213,6 @@
         width: 20rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: 9rem;
     }
@@ -252,8 +232,6 @@
         width: 20rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: 9rem;
     }
@@ -267,15 +245,12 @@
     
 }
 
-
 @media screen and (min-height: 1000px) {
 
     .cocktail .cardCocktail .imgCocktail {
         width: 17rem;
         margin: auto;
         align-self: center;
-        animation-name: rightToleft;
-        animation-duration: 1s;
         padding-bottom: 0.5rem;
         margin-top: 2rem;
     }
@@ -304,10 +279,6 @@
 
 @media screen and (min-width: 768px) {
 
-    .formSearch{
-        width: 50%;
-    }
-
     .cocktail{
         width: 40%;
         margin-top: 2rem;
@@ -317,21 +288,7 @@
 
         .imgCocktail{
             width: 22rem;
-            transform: translate(-50%);
-            animation-name: rightToleft;
-            animation-duration: 1s;
         }
-        /*@keyframes rightToleft {
-            0% {
-                position: absolute;
-                transform: translate(120%);
-            }
-            100% {
-                position: absolute;
-                transform: translate(-50%);
-                overflow-y: hidden;   
-            }
-          }*/
 
         .infoCocktail,
         .recipeCocktail{
